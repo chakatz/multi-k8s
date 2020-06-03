@@ -11,6 +11,6 @@ docker push chakatz/multi-server:$SHA
 docker push chakatz/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image Deployment/client-deployment client=chakatz/multi-client:$SHA
-kubectl set image Deployment/server-deployment client=chakatz/multi-server:$SHA
-kubectl set image Deployment/worker-deployment client=chakatz/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=chakatz/multi-client:$SHA
+kubectl set image deployments/server-deployment client=chakatz/multi-server:$SHA
+kubectl set image deployments/worker-deployment client=chakatz/multi-worker:$SHA
