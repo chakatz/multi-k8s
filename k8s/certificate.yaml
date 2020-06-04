@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: skilanu-com-tls
+spec:
+  secretName: skilanu-com
+  issuerRef:
+    name: lestsencrypt-prod
+    kind: ClusterIssuer
+  commonName: skilanu.com
+  dnsNames:
+    - skilanu.com
+    - www.skilanu.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - skilanu.com
+          - www.skilanu.com
