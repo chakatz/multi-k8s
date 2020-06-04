@@ -11,10 +11,3 @@ spec:
   dnsNames:
     - skilanu.com
     - www.skilanu.com
-  acme:
-    config:
-      - http01:
-          ingressClass: nginx
-        domains:
-          - skilanu.com
-          - www.skilanu.com
